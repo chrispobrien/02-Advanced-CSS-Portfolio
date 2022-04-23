@@ -1,3 +1,11 @@
+:root {
+  --default-bg-color: #cadbdf;
+  --hdr-ftr-bg-color: #073342;
+  --hdr-ftr-text-color: white;
+  --separator-color: #112025;
+
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,4 +14,124 @@
   
   body {
     font-family: 'Roboto Condensed', sans-serif;
+    font-size: 16px;
+    background-color: var(--default-bg-color);
+  }
+
+  header, footer {
+    background-color: var(--hdr-ftr-bg-color);
+  }
+
+  footer {
+    display: inline-block;
+    width: 100%;
+  }
+
+  header h1, footer h1 {
+    display: inline-block;
+    font-size: 40px;
+    color: var(--hdr-ftr-text-color);
+    padding: 5px;
+  }
+
+  header nav {
+    padding-top: 15px;
+    margin-right: 20px;
+    float: right;
+    font-size: 20px;
+  }
+
+  header nav ul {
+    list-style-type: none;
+  }
+
+  header nav ul li {
+    display: inline-block;
+    margin-left: 25px;
+  }
+
+  header nav ul li a {
+    color: var(--hdr-ftr-text-color);
+    text-decoration: none;
+  }
+  
+  header img {
+    position: absolute;
+    left: 400px;
+  }
+
+  #aboutMe {
+    width: 25%;
+    display: inline-block;
+  }
+
+  #aboutMe article {
+    padding-right: 10px;
+    margin: 20px 0px 20px 10px;
+    border-right: 1px solid var(--separator-color);
+  }
+
+  #myWorkWrapper {
+    width: 75%;
+    clear: both;
+    float: right;
+  }
+
+  #myWork {
+    display: flex;
+    flex-wrap: wrap;
+    
+    clear: both;
+    float: right;
+    margin: 20px 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--separator-color);
+  }
+
+  #myWork article {
+    width: 200px;
+    height: 300px;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 12px;
+    margin: 10px;
+  }
+
+  #myWork article h3 {
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    overflow: hidden;
+    margin-bottom: 3px;
+    border-bottom: 1px solid black;
+  }
+
+  #contactMe {
+    width: 70%;
+    clear: both;
+    float: right;
+    margin-bottom: 20px;
+  }
+
+  #contactMe h2 {
+    padding: 5px;
+  }
+
+  #contactMe ul {
+    padding: 0px 5px;
+    list-style-type: none;
+    font-size: 25px;
+  }
+
+  #contactMe a {
+    text-decoration: none;
+  }
+
+
+
+  /* For smaller screen sizes this switches the photo to appear in column mode */
+  @media only screen and (max-width: 600px) {
+    header img {
+      position: relative;
+      left: 0px;
+    }
   }
