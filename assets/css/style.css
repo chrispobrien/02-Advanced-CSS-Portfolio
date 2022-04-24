@@ -1,184 +1,270 @@
 :root {
-  --default-bg-color: #cadbdf;
-  --hdr-ftr-bg-color: #073342;
-  --hdr-ftr-text-color: white;
-  --separator-color: #112025;
-
+  --banner-bg-color: #31343d;
+  --inner-bg-color: #82cccd;
+  --text-color: #445876;
+  --page-bg-color: #ededf6;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 16px;
-    background-color: var(--default-bg-color);
-  }
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
 
-  header, footer {
-    background-color: var(--hdr-ftr-bg-color);
-  }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  background-color: var(--page-bg-color);
+}
 
-  footer {
-    display: inline-block;
-    width: 100%;
-  }
+header {
+  background-color: var(--banner-bg-color);
+  height: 90px;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
 
-  header h1, footer h1 {
-    display: inline-block;
-    font-size: 40px;
-    color: var(--hdr-ftr-text-color);
-    padding: 5px;
+header h1 {
+  display: absolute;
+  height: 40px;
+  font-size: 30px;
+  color: var(--banner-bg-color);
+  background-color: var(--inner-bg-color);
+  padding: 5px 5px 5px 50px;
+  margin-top: 25px;
+}
+
+header nav {
+  font-size: 20px;
+  background-color: var(--banner-bg-color);
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 20px;
+}
+
+header nav ul {
+  list-style-type: none;
+}
+
+header nav ul li {
+  display: inline-block;
+  padding: 10px 20px 0px 5px;
+}
+
+header nav ul li a {
+  color: var(--inner-bg-color);
+  text-decoration: none;
+  border-bottom: 3px solid var(--inner-bg-color);
+  padding: 5px 5px;
+}
+
+#banner {
+  background-image: url("../images/banner.jpg");
+  height: 200px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+#banner-title {
+  position: absolute;
+  font-size: 30px;
+  font-weight:bold;
+  background-color: var(--inner-bg-color);
+  color: var(--banner-bg-color);
+  top: 140px;
+  right: 50px;
+  padding: 5px;
+}
+
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding-top:20px;
+}
+
+#aboutMe, #myWork, #contactMe {
+  width: 20%;
+  height: 100%;
+  display: inline-block;
+}
+
+#aboutMe .sectionTitle,
+#myWork .sectionTitle,
+#contactMe .sectionTitle {
+  height: 100%;
+  color: --var(--text-color);
+  font-size: 50px;
+  font-weight: bold;
+  text-align: right;
+  padding-right: 10px;
+}
+
+#aboutMeText {
+  width: 70%;
+  display: inline-block;
+}
+
+#aboutMeText article {
+  border-left: 3px solid var(--text-color);
+}
+
+#aboutMeText article p {
+  padding: 0px 10px 10px 10px;
+  color: var(--text-color);
+}
+
+#articles {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  border-left: 3px solid var(--text-color);
+}
+
+#articles article {
+  border: 3px solid var(--inner-bg-color);
+  position: relative;
+  display:flex;
+  margin: 5px;
+}
+
+#articles article img {
+  width:100%;
+  object-position: center;
+}
+
+.shade {
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.shade:hover {
+  background: rgba(0,0,0,0);
+}
+
+#articles .cardText {
+  position: absolute;
+  height: 70px;
+  width: 250px;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  left: 0px;
+  bottom: 30px;
+  padding: 5px;
+  background-color: var(--inner-bg-color);
+}
+
+#articles h3 {
+  font-size: 30px;
+  background-color: --var(--inner-bg-color);
+}
+
+#articles p {
+  font-size: 20px;
+  left: 0px;
+  bottom: 10px
+}
+
+.big {
+  height: 400px;
+  width: 810px;
+  min-width: 600px;
+  overflow: hidden;
+}
+
+.regular {
+  height: 200px;
+  width: 400px;
+  min-width: 400px;
+  overflow: hidden;
+}
+
+#contactMeNav {
+  float: right;
+  font-size: 20px;
+  display: flex;
+  flex-flow: row wrap;
+  border-left: 3px solid var(--text-color);
+}
+
+#contactMeNav ul {
+  display: flex;
+  flex-flow: row wrap;
+  list-style-type: none;
+  padding: 5px;
+}
+
+#contactMeNav ul li {
+  display: inline-block;
+  padding: 10px 20px 0px 5px;
+}
+
+#contactMeNav ul li a {
+  display: inline-block;
+  color: var(--text-color);
+  text-decoration: none;
+  border-bottom: 3px solid var(--banner-bg-color);
+  padding: 5px 5px;
+}
+
+@media only screen and (max-width: 768px) {
+
+  header {
+    height: 160px;
   }
 
   header nav {
-    padding-top: 15px;
-    padding-right: 20px;
-    padding-left: 0px;
-    float: right;
-    font-size: 20px;
-    background-color: var(--hdr-ftr-bg-color);
+    margin-top: 0px;
   }
 
-  header nav ul {
-    list-style-type: none;
+  #aboutMe, #myWork, #contactMe {
+    width: 100%;
   }
 
-  header nav ul li {
-    display: inline-block;
-    padding-left: 25px;
+  #aboutMe .sectionTitle,
+  #myWork .sectionTitle,
+  #contactMe .sectionTitle {
+    text-align: left;
+    padding-left: 5px;
   }
 
-  header nav ul li a {
-    color: var(--hdr-ftr-text-color);
-    text-decoration: none;
-  }
-  
-  header img {
-    position: absolute;
-    left: 400px;
+  .section {
+    flex-direction: column;
   }
 
-  #aboutMe {
-    min-width: 200px;
-    width: 25%;
-    display: inline-block;
-  }
-
-  #aboutMe article {
-    padding-right: 10px;
-    margin: 20px 0px 20px 10px;
-    border-right: 1px solid var(--separator-color);
-  }
-
-  #myWorkWrapper {
-    width: 75%;
-    min-width: 250px;
-    clear: both;
-    float: right;
-  }
-
-  #myWork {
-    display: flex;
-    flex-wrap: wrap;
-    
-    clear: both;
-    float: right;
-    margin: 20px 20px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid var(--separator-color);
-  }
-
-  #myWork article {
-    width: 200px;
-    height: 300px;
-    border: 1px solid black;
-    border-radius: 8px;
-    padding: 12px;
-    margin: 10px;
-    position: relative;
-  }
-
-  #myWork .firstArticle {
-    width: 420px;
-  }
-
-  .btn-left {
-    position: absolute;
-    width: 90px;
-    height: 40px;
-    border: 1px solid transparent;
-    background-color: white;
-    left: 5px;
-    bottom:5px;
-    text-align: center;
-    padding-top: 7px;
-    vertical-align:middle;
-  }
-
-  .btn-left:hover {
-    border: 1px solid black;
-  }
-
-  .btn-right {
-    position: absolute;
-    width: 90px;
-    height: 40px;
-    border: 1px solid transparent;
-    background-color: white;
-    right: 5px;
-    bottom:5px;
-    text-align: center;
-    padding-top: 7px;
-    vertical-align:middle;
-  }
-
-  .btn-right:hover {
-    border: 1px solid black;
-  }
-
-  #myWork article h3 {
-    white-space: nowrap;
-    text-overflow:ellipsis;
-    overflow: hidden;
-    margin-bottom: 3px;
-    border-bottom: 1px solid black;
-  }
-
-  #contactMe {
-    width: 70%;
-    clear: both;
-    float: right;
-    margin-bottom: 20px;
-  }
-
-  #contactMe h2 {
+  #aboutMeText {
+    width: 100%;
     padding: 5px;
   }
 
-  #contactMe ul {
-    padding: 0px 5px;
-    list-style-type: none;
-    font-size: 25px;
+  #aboutMeText article, #articles {
+    border-left: 0px;
+    border-top: 3px solid var(--text-color);
   }
 
-  #contactMe a {
-    text-decoration: none;
+  #aboutMeText article p {
+    padding: 10px 0px;
   }
 
-
-
-  /* For smaller screen sizes this switches the photo to appear in column mode */
-  @media only screen and (max-width: 600px) {
-    header img {
-      position: relative;
-      left: 0px;
-    }
-
-    #myWorkWrapper {
-      float:left;
-    }
+  .big {
+    width: 400px;
+    height: 200px;
+    min-width: 400px;
   }
+
+  #contactMeNav {
+    border-left: 0px;
+    border-top: 3px solid var(--text-color);
+    flex-direction: column;
+  }
+}
