@@ -36,9 +36,11 @@
 
   header nav {
     padding-top: 15px;
-    margin-right: 20px;
+    padding-right: 20px;
+    padding-left: 0px;
     float: right;
     font-size: 20px;
+    background-color: var(--hdr-ftr-bg-color);
   }
 
   header nav ul {
@@ -47,7 +49,7 @@
 
   header nav ul li {
     display: inline-block;
-    margin-left: 25px;
+    padding-left: 25px;
   }
 
   header nav ul li a {
@@ -61,6 +63,7 @@
   }
 
   #aboutMe {
+    min-width: 200px;
     width: 25%;
     display: inline-block;
   }
@@ -73,6 +76,7 @@
 
   #myWorkWrapper {
     width: 75%;
+    min-width: 250px;
     clear: both;
     float: right;
   }
@@ -95,6 +99,45 @@
     border-radius: 8px;
     padding: 12px;
     margin: 10px;
+    position: relative;
+  }
+
+  #myWork .firstArticle {
+    width: 420px;
+  }
+
+  .btn-left {
+    position: absolute;
+    width: 90px;
+    height: 40px;
+    border: 1px solid transparent;
+    background-color: white;
+    left: 5px;
+    bottom:5px;
+    text-align: center;
+    padding-top: 7px;
+    vertical-align:middle;
+  }
+
+  .btn-left:hover {
+    border: 1px solid black;
+  }
+
+  .btn-right {
+    position: absolute;
+    width: 90px;
+    height: 40px;
+    border: 1px solid transparent;
+    background-color: white;
+    right: 5px;
+    bottom:5px;
+    text-align: center;
+    padding-top: 7px;
+    vertical-align:middle;
+  }
+
+  .btn-right:hover {
+    border: 1px solid black;
   }
 
   #myWork article h3 {
@@ -133,5 +176,9 @@
     header img {
       position: relative;
       left: 0px;
+    }
+
+    #myWorkWrapper {
+      float:left;
     }
   }
