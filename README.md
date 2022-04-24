@@ -30,4 +30,36 @@ WHEN I resize the page or view the site on various screens and devices
 THEN I am presented with a responsive layout that adapts to my viewport
 ```
 
+* For this homework exercise, we begin with a blank page. However, there was an animated gif provided to show the application's appearance and functionality.
+* I think we are intended to make a functional page like the animated gif.
+* I used flexbox and media queries to create a responsive design
+* All images besides my photo are public domain, downloaded from Pixnio.com.
+
+## Installation
+
+Using git, issue the command:
+
+~~~sh
+git clone https://github.com/chrispobrien/02-Advanced-CSS-Portfolio.git
+~~~
+
+This will create the folder 02-Advanced-CSS-Portfolio within which you will find index.html, this README.md file, and an assets folder containing a css folder for one stylesheet, style.css, and an images folder containing the images that appear on this page.
+
+## Usage
+
+Move or copy the contents of the folder into your web server's folder.
+
+[![Profile Page Screen Shot][screenshot]](assets/images/screenshot.jpg)
+
+## Credits
+
+Week 2 homework challenge for Columbia Bootcamp/Trilogy.
+
+## License
+
+Public domain.
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+[screenshot]: ./assets/images/screenshot.jpg
 

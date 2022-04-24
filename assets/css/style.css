@@ -1,3 +1,4 @@
+/* Colors used on this page */
 :root {
   --banner-bg-color: #31343d;
   --inner-bg-color: #82cccd;
@@ -5,18 +6,21 @@
   --page-bg-color: #ededf6;
 }
 
+/* Universal selector */
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
 }
 
+/* body element format, defaults */
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   background-color: var(--page-bg-color);
 }
 
+/* Header bar */
 header {
   background-color: var(--banner-bg-color);
   height: 90px;
@@ -26,6 +30,7 @@ header {
   justify-content: space-between;
 }
 
+/* Header bar title */
 header h1 {
   display: absolute;
   height: 40px;
@@ -36,6 +41,15 @@ header h1 {
   margin-top: 25px;
 }
 
+/* Header bar photo of me */
+header img {
+  width: 80px;
+  height: 80px;
+  min-width: 80px;
+  min-height: 80px;
+}
+
+/* Header bar nav section */
 header nav {
   font-size: 20px;
   background-color: var(--banner-bg-color);
@@ -44,15 +58,18 @@ header nav {
   margin-top: 20px;
 }
 
+/* Set nav bar style */
 header nav ul {
   list-style-type: none;
 }
 
+/* Each nav bar item */
 header nav ul li {
   display: inline-block;
   padding: 10px 20px 0px 5px;
 }
 
+/* Header nav bar anchor tag format */
 header nav ul li a {
   color: var(--inner-bg-color);
   text-decoration: none;
@@ -60,6 +77,7 @@ header nav ul li a {
   padding: 5px 5px;
 }
 
+/* Cute banner */
 #banner {
   background-image: url("../images/banner.jpg");
   height: 200px;
@@ -69,6 +87,7 @@ header nav ul li a {
   position: relative;
 }
 
+/* Overlay title of page on banner */
 #banner-title {
   position: absolute;
   font-size: 30px;
@@ -80,6 +99,7 @@ header nav ul li a {
   padding: 5px;
 }
 
+/* Three section class tags */
 .section {
   display: flex;
   flex-wrap: wrap;
@@ -87,12 +107,14 @@ header nav ul li a {
   padding-top:20px;
 }
 
+/* Three section id tags */
 #aboutMe, #myWork, #contactMe {
   width: 20%;
   height: 100%;
   display: inline-block;
 }
 
+/* Three section id tags, format their title identically */
 #aboutMe .sectionTitle,
 #myWork .sectionTitle,
 #contactMe .sectionTitle {
@@ -104,20 +126,26 @@ header nav ul li a {
   padding-right: 10px;
 }
 
+/* Section 1 About Me can be one or more paragraphs
+  Intended to be alongside and to the right of the title */
 #aboutMeText {
   width: 70%;
   display: inline-block;
 }
 
+/* Neat divider */
 #aboutMeText article {
   border-left: 3px solid var(--text-color);
 }
 
+/* About Me content format */
 #aboutMeText article p {
   padding: 0px 10px 10px 10px;
   color: var(--text-color);
 }
 
+/* Section 2: My Work (projects)
+  articles id tag is the container for each article element (project) */
 #articles {
   width: 70%;
   display: flex;
@@ -126,6 +154,13 @@ header nav ul li a {
   border-left: 3px solid var(--text-color);
 }
 
+/* Disable anchor tag color changes */
+#articles a:visited,
+#articles a {
+  color: inherit;
+}
+
+/* Each project is an article element */
 #articles article {
   border: 3px solid var(--inner-bg-color);
   position: relative;
@@ -133,11 +168,14 @@ header nav ul li a {
   margin: 5px;
 }
 
+/* Each article is filled with a background image */
 #articles article img {
   width:100%;
   object-position: center;
+  object-fit: cover;
 }
 
+/* Shade class, shades each article/project */
 .shade {
   width: 100%;
   height: 100%;
@@ -147,10 +185,12 @@ header nav ul li a {
   left: 0px;
 }
 
+/* On mouse hover, removes the shade, brightens it */
 .shade:hover {
   background: rgba(0,0,0,0);
 }
 
+/* Container for text overlay on each article/project */
 #articles .cardText {
   position: absolute;
   height: 70px;
@@ -164,17 +204,20 @@ header nav ul li a {
   background-color: var(--inner-bg-color);
 }
 
+/* Title of project */
 #articles h3 {
   font-size: 30px;
   background-color: --var(--inner-bg-color);
 }
 
+/* Description of project */
 #articles p {
   font-size: 20px;
   left: 0px;
   bottom: 10px
 }
 
+/* Class for the first article/project, make BIG */
 .big {
   height: 400px;
   width: 810px;
@@ -182,6 +225,7 @@ header nav ul li a {
   overflow: hidden;
 }
 
+/* All other article/project sizes */
 .regular {
   height: 200px;
   width: 400px;
@@ -189,6 +233,8 @@ header nav ul li a {
   overflow: hidden;
 }
 
+/* Section 3: Contact Me */
+/* Nav bar within the Contact Me section */
 #contactMeNav {
   float: right;
   font-size: 20px;
@@ -197,6 +243,7 @@ header nav ul li a {
   border-left: 3px solid var(--text-color);
 }
 
+/* Remove default formatting for ul */
 #contactMeNav ul {
   display: flex;
   flex-flow: row wrap;
@@ -204,11 +251,13 @@ header nav ul li a {
   padding: 5px;
 }
 
+/* Format each item */
 #contactMeNav ul li {
   display: inline-block;
   padding: 10px 20px 0px 5px;
 }
 
+/* Format Contact Me nav bar anchor tags */
 #contactMeNav ul li a {
   display: inline-block;
   color: var(--text-color);
@@ -217,20 +266,30 @@ header nav ul li a {
   padding: 5px 5px;
 }
 
+/* Add a bit of space at the bottom of the page */
+footer {
+  height: 40px;
+}
+
+/* Format for narrow screen sizes */
 @media only screen and (max-width: 768px) {
 
+  /* Increase header height to format contents in a column */
   header {
-    height: 160px;
+    height: 280px;
   }
 
+  /* Remove margin-top since we don't need it in column form */
   header nav {
     margin-top: 0px;
   }
 
+  /* Section titles will format in column so 100% is fine */
   #aboutMe, #myWork, #contactMe {
     width: 100%;
   }
 
+  /* Switch right align to left and add padding */
   #aboutMe .sectionTitle,
   #myWork .sectionTitle,
   #contactMe .sectionTitle {
@@ -238,33 +297,37 @@ header nav ul li a {
     padding-left: 5px;
   }
 
+  /* Change flex-direction from row to column */
   .section {
     flex-direction: column;
   }
 
+  /* Similar to section titles, change width to 100% to take up the whole column */
   #aboutMeText {
     width: 100%;
     padding: 5px;
   }
 
-  #aboutMeText article, #articles {
+  /* Switch the vertical line between section title and content area to a horizontal line */
+  #aboutMeText article, #articles, #contactMeNav {
     border-left: 0px;
     border-top: 3px solid var(--text-color);
   }
 
+  /* Make the content of About Me more readable */
   #aboutMeText article p {
     padding: 10px 0px;
   }
 
+  /* Switch eah article/project to 100% width */
+  #articles {
+    width: 100%;
+  }
+
+  /* In this narrow view, switch the first project to be the same size as all the others */
   .big {
     width: 400px;
     height: 200px;
     min-width: 400px;
-  }
-
-  #contactMeNav {
-    border-left: 0px;
-    border-top: 3px solid var(--text-color);
-    flex-direction: column;
   }
 }
