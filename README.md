@@ -34,6 +34,7 @@ THEN I am presented with a responsive layout that adapts to my viewport
 * I think we are intended to make a functional page like the animated gif.
 * I used flexbox and media queries to create a responsive design
 * All images besides my photo are public domain, downloaded from Pixnio.com.
+* There is a resume link in the header but I have not posted my resume
 
 ## Installation
 
