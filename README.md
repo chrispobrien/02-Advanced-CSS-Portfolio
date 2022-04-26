@@ -3,7 +3,7 @@
 ## Description
 Week 2 of Columbia Engineering Coding Bootcamp has us creating a personal Portfolio page using Advanced CSS and particularly flex elements. This makes the page readable and friendly to mobile users, which constitute up to 70% of visitors.
 
-For the published page, please visit my Github pages site: [https://chrispobrien.gibthub.io/02-Advanced-CSS-Portfolio/]
+For the published page, please visit my Github pages site: [https://chrispobrien.github.io/02-Advanced-CSS-Portfolio/]
 
 Objectives include:
 
