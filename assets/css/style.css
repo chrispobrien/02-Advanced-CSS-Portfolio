@@ -198,7 +198,7 @@ header nav ul li a {
 #articles .cardText {
   position: absolute;
   height: 70px;
-  width: 250px;
+  width: 375px;
   display: inline-block;
   align-items: center;
   justify-content: center;
